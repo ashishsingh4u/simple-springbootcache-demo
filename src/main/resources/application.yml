@@ -1,0 +1,13 @@
+server:
+  port: 9091
+spring:
+  application:
+    name: SimpleSpringBootCacheDemoApplication
+  output:
+    ansi:
+      enabled: ALWAYS
+#logging:
+#  level:
+#    org:
+#      springframework:
+#        web: INFO
