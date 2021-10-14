@@ -1,11 +1,12 @@
 package com.techienotes.services;
 
-import com.techienotes.dto.Book;
+import com.techienotes.dto.BookDto;
+import com.techienotes.entity.Book;
 
 public interface BookService {
-    Book addBook(Book book);
+    Book addBook(BookDto book);
 
-    Book updateBook(Book book);
+    Book updateBook(BookDto book);
 
     Book getBook(long id);
 

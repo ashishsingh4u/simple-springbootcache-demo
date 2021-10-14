@@ -1,6 +1,7 @@
 package com.techienotes.controller;
 
-import com.techienotes.dto.Book;
+import com.techienotes.dto.BookDto;
+import com.techienotes.entity.Book;
 import com.techienotes.services.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -20,12 +21,12 @@ public class BookController {
     private BookService bookService;
 
     @PostMapping("/book")
-    public Book addBook(@RequestBody Book book) {
+    public Book addBook(@RequestBody BookDto book) {
         return bookService.addBook(book);
     }
 
     @PutMapping("/book")
-    public Book updateBook(@RequestBody Book book) {
+    public Book updateBook(@RequestBody BookDto book) {
         return bookService.updateBook(book);
     }
 

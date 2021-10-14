@@ -1,6 +1,8 @@
 package com.techienotes.services;
 
-import com.techienotes.dto.Book;
+import com.techienotes.dto.BookDto;
+import com.techienotes.entity.Book;
+import com.techienotes.mapper.BookMapper;
 import com.techienotes.repository.BookRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,18 +28,23 @@ public class BookServiceImpl implements BookService {
     @Autowired
     private BookRepository bookRepository;
 
+    @Autowired
+    private BookMapper bookMapper;
+
     @Override
-    public Book addBook(Book book) {
+    public Book addBook(BookDto book) {
         log.info("adding book with id - {}", book.getId());
-        return bookRepository.save(book);
+        var bookEntity = bookMapper.bookDtoToBook(book);
+        return bookRepository.save(bookEntity);
     }
 
     @Override
     @CachePut(cacheNames = "books", key = "#book.id")
-    public Book updateBook(Book book) {
+    public Book updateBook(BookDto book) {
+        var bookEntity = bookMapper.bookDtoToBook(book);
         bookRepository.updateAddress(book.getId(), book.getName());
         log.info("book updated with new name");
-        return book;
+        return bookEntity;
     }
 
     @Override
