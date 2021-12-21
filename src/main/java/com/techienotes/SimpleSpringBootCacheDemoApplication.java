@@ -11,5 +11,4 @@ public class SimpleSpringBootCacheDemoApplication {
     public static void main(String[] args) {
         SpringApplication.run(SimpleSpringBootCacheDemoApplication.class, args);
     }
-
 }

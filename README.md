@@ -39,3 +39,7 @@ server:
 * getBook: https://localhost:8443/v1/book/1
 * updateBook: https://localhost:8443/v1/book
 * deleteBook: https://localhost:8443/v1/book/1
+
+### Spring Doc (Swagger)
+
+* https://localhost:8443/swagger-ui.html
