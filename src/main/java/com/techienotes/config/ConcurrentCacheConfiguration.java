@@ -4,11 +4,10 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.autoconfigure.cache.CacheManagerCustomizer;
 import org.springframework.cache.concurrent.ConcurrentMapCacheManager;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
 
-@Configuration
+//@Configuration
 @Slf4j
-public class CacheConfiguration {
+public class ConcurrentCacheConfiguration {
 
     @Bean
     CacheManagerCustomizer<ConcurrentMapCacheManager> customizer() {
