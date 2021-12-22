@@ -1,4 +1,4 @@
-package com.techienotes.services;
+package com.techienotes.service;
 
 import com.techienotes.dto.BookDto;
 import com.techienotes.entity.Book;

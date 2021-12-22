@@ -1,4 +1,4 @@
-package com.techienotes.services;
+package com.techienotes.service;
 
 import com.techienotes.dto.BookDto;
 import com.techienotes.entity.Book;
@@ -48,11 +48,11 @@ public class BookServiceImpl implements BookService {
     }
 
     @Override
-    @Cacheable(cacheNames = "books", key = "#id")
+    @Cacheable(cacheNames = "books", key = "#id", unless = "#result == null")
     public Book getBook(long id) {
         log.info("fetching book from db");
         Optional<Book> book = bookRepository.findById(id);
-        return book.orElseGet(Book::new);
+        return book.orElse(null);
     }
 
     @Override
