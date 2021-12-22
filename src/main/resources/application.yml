@@ -14,6 +14,9 @@ spring:
   output:
     ansi:
       enabled: ALWAYS
+  cache:
+    jcache:
+      config: classpath:ehcache.xml
 
 # Spring Doc support
 springdoc:

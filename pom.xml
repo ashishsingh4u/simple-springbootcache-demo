@@ -26,9 +26,21 @@
             <artifactId>spring-boot-starter-cache</artifactId>
         </dependency>
 
+        <!--Caffeine Support-->
         <dependency>
             <groupId>com.github.ben-manes.caffeine</groupId>
             <artifactId>caffeine</artifactId>
+        </dependency>
+
+        <!--EhCache Support-->
+        <dependency>
+            <groupId>org.ehcache</groupId>
+            <artifactId>ehcache</artifactId>
+        </dependency>
+        
+        <dependency>
+            <groupId>javax.cache</groupId>
+            <artifactId>cache-api</artifactId>
         </dependency>
 
         <dependency>
